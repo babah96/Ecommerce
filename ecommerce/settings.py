@@ -137,3 +137,121 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# from pathlib import Path
+# import os
+
+# BASE_DIR = Path(__file__).resolve().parent.parent
+
+# SECRET_KEY = "dev-secret-key-change-me"
+# DEBUG = True
+
+# ALLOWED_HOSTS = ["*"]  # en dev
+
+# # --- Apps ---
+# INSTALLED_APPS = [
+#     # Django
+#     "django.contrib.admin",
+#     "django.contrib.auth",
+#     "django.contrib.contenttypes",
+#     "django.contrib.sessions",
+#     "django.contrib.messages",
+#     "django.contrib.staticfiles",
+
+#     # 3rd-party
+#     "rest_framework",
+#     "rest_framework.authtoken",
+#     "corsheaders",
+
+#     # Local app
+#     "shop",  # <= ton app avec les modèles ci-dessus
+# ]
+
+# # --- Middlewares ---
+# MIDDLEWARE = [
+#     "corsheaders.middleware.CorsMiddleware",   # mettre CORS en haut
+#     "django.middleware.security.SecurityMiddleware",
+#     "django.contrib.sessions.middleware.SessionMiddleware",
+#     "django.middleware.common.CommonMiddleware",
+#     "django.middleware.csrf.CsrfViewMiddleware",
+#     "django.contrib.auth.middleware.AuthenticationMiddleware",
+#     "django.contrib.messages.middleware.MessageMiddleware",
+#     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+# ]
+
+# ROOT_URLCONF = "ecommerce.urls"
+
+# TEMPLATES = [
+#     {
+#         "BACKEND": "django.template.backends.django.DjangoTemplates",
+#         "DIRS": [],
+#         "APP_DIRS": True,
+#         "OPTIONS": {
+#             "context_processors": [
+#                 "django.template.context_processors.debug",
+#                 "django.template.context_processors.request",
+#                 "django.contrib.auth.context_processors.auth",
+#                 "django.contrib.messages.context_processors.messages",
+#             ],
+#         },
+#     },
+# ]
+
+# WSGI_APPLICATION = "ecommerce.wsgi.application"   # en dev classique
+# # ASGI_APPLICATION = "ecommerce.asgi.application" # si tu ajoutes Channels plus tard
+
+# # --- Database (SQLite pour démarrer) ---
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
+
+# # --- Auth user model ---
+# AUTH_USER_MODEL = "shop.User"  # IMPORTANT pour tes modèles
+
+# # --- Password validators (ok avec validate_password dans UserSerializer) ---
+# AUTH_PASSWORD_VALIDATORS = [
+#     {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"},
+#     {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator"},
+#     {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"},
+#     {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
+# ]
+
+# # --- Internationalisation ---
+# LANGUAGE_CODE = "fr-fr"
+# TIME_ZONE = "Africa/Nouakchott"
+# USE_I18N = True
+# USE_TZ = True
+
+# # --- Static & Media ---
+# STATIC_URL = "/static/"
+# STATIC_ROOT = BASE_DIR / "staticfiles"     # utile pour collectstatic en prod
+# STATICFILES_DIRS = []                      # optionnel en dev
+
+# MEDIA_URL = "/media/"
+# MEDIA_ROOT = BASE_DIR / "media"
+
+# # --- DRF ---
+# REST_FRAMEWORK = {
+#     "DEFAULT_AUTHENTICATION_CLASSES": [
+#         "rest_framework.authentication.TokenAuthentication",
+#     ],
+#     "DEFAULT_PERMISSION_CLASSES": [
+#         "rest_framework.permissions.AllowAny",  # on ouvre par défaut…
+#     ],
+# }
+# # Remarque : dans tes vues tu mets @permission_classes([IsAuthenticated]),
+# # donc même si AllowAny global, les endpoints sensibles restent protégés.
+
+# # --- CORS (pour tester depuis React/Next) ---
+# CORS_ALLOW_ALL_ORIGINS = True  # en dev. En prod, utilise CORS_ALLOWED_ORIGINS = ["http://localhost:3000", ...]
+# CORS_ALLOW_CREDENTIALS = True
+
+# # --- CSRF (si tu testes via un front) ---
+# CSRF_TRUSTED_ORIGINS = [
+#     "http://localhost:3000",
+#     "http://127.0.0.1:3000",
+# ]
+
